@@ -1161,6 +1161,7 @@ Check Docking Station DP Windows
 
 Check Internal LCD Linux
     [Documentation]    Check if internal LCD is recognized by Linux OS.
+    # Assumption: Intel iGPU
     ${out}=    Execute Linux Command    cat /sys/devices/pci0000:00/0000:00:02.0/drm/card*/*eDP-1/status
     Should Contain    ${out}    connected
 
